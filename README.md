@@ -22,7 +22,7 @@ const shikhargupta = {
   pronouns: "he" | "him",
   code: [Javascript, HTML, CSS, Python, Java, C/C++, C#, Bash],
   tools: [React, Node, Express, MongoDB, Styled-Components, Tailwind, Arch-Linux, AmazonWebServices, Flask, Tensorflow, Numpy, Pandas, ScikitLearn, Docker],
-  architecture: ["microservices","REST", "MVC", "event-driven", "design system pattern"],
+ 
   
  challenge: "I am doing the 450 questions of DSA LoveBabbar sheet in C++"
 }
