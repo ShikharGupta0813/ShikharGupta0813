@@ -14,7 +14,6 @@
 
 
 
-
 ### <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="50"> A little more about me...  
 
 ```javascript
@@ -23,7 +22,6 @@ const shikhargupta = {
   code: [Javascript, HTML, CSS, Python, Java, C/C++, C#, Bash],
   tools: [React, Node, Express, MongoDB, Styled-Components, Tailwind, Arch-Linux, AmazonWebServices, Flask, Tensorflow, Numpy, Pandas, ScikitLearn, Docker],
  
-  
  challenge: "I am doing the 450 questions of DSA LoveBabbar sheet in C++"
 }
 ```
