@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Shikhar Gupta</h1>
+
 <h3 align="center">👋 Hi, I’m Shikhar Gupta from IIIT Sonepat! I'm a passionate developer with expertise in web development (MERN stack), data structures and algorithms (DSA), machine learning, and cloud computing. 🌐 I enjoy building dynamic and responsive web applications, solving complex problems with DSA, and exploring the fascinating world of machine learning. My projects reflect my commitment to leveraging technology for innovative solutions.</h3>
 
 - 🔭 I’m currently working on **CipherBox**
