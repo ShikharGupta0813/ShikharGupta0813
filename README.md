@@ -22,7 +22,7 @@ const shikhargupta = {
   code: [Javascript, HTML, CSS, Python, Java, C/C++, C#, Bash],
   tools: [React, Node, Express, MongoDB, Styled-Components, Tailwind, Arch-Linux, AmazonWebServices, Flask, Tensorflow, Numpy, Pandas, ScikitLearn, Docker],
  
- challenge: "I am doing the 450 questions of DSA LoveBabbar sheet in C++"
+ challenge: "I am doing the 450 questions of DSA Striver(A2Z) sheet in C++"
 }
 ```
 
