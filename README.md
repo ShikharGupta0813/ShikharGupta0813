@@ -1,31 +1,72 @@
-
-<h3 align="center">👋 Hi, I’m Shikhar Gupta from IIIT Sonepat! I'm a passionate developer with expertise in web development (MERN stack), data structures and algorithms (DSA), machine learning, and cloud computing. 🌐 I enjoy building dynamic and responsive web applications, solving complex problems with DSA, and exploring the fascinating world of machine learning. My projects reflect my commitment to leveraging technology for innovative solutions.</h3>
-<img align='right' src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2pnMHJoam1iY2Y1bW90Y3dncG0yeHNmeWdtNWRxc2R6M2hnMDdndCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/5eLDrEaRGHegx2FeF2/giphy.webp" width="230">
-
-
-- 📫 How to reach me **shikhargupta484@gmail.com**
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/shikhar-gupta-389552251" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="shikhar-gupta-389552251" height="30" width="40" /></a>
-<a href="https://instagram.com/_gupta_shikhar" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="_gupta_shikhar" height="30" width="40" /></a>
+<!-- Banner -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=220&section=header&text=Shikhar%20Gupta&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Software%20Development%20Engineer%20%7C%20Full%20Stack%20%7C%20Backend&descAlignY=55" />
 </p>
 
+<h3 align="center">👋 Hi, I'm Shikhar Gupta</h3>
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com/?lines=SDE+Fresher+%7C+IIIT+Sonepat;Backend+%26+Full+Stack+Developer;MERN+%7C+AWS+%7C+Docker;Building+Scalable+Systems;Exploring+AI-Powered+Applications&center=true&width=700&height=45" />
+</p>
 
-### <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="50"> A little more about me...  
+<img align="right" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="300"/>
 
-```javascript
-const shikhargupta = {
-  pronouns: "he" | "him",
-  code: [Javascript, HTML, CSS, Python, Java, C/C++, C#, Bash],
-  tools: [React, Node, Express, MongoDB, Styled-Components, Tailwind, Arch-Linux, AmazonWebServices, Flask, Tensorflow, Numpy, Pandas, ScikitLearn, Docker],
- 
- challenge: "I am doing the 450 questions of DSA Striver(A2Z) sheet in C++"
+---
+
+## 🧑‍💻 About Me
+
+I’m a **Computer Science undergraduate at IIIT Sonepat** with hands-on experience through multiple **Software Engineering and Full Stack internships**. I enjoy building **scalable backend systems**, **production-ready web applications**, and experimenting with **AI-powered software**.
+
+I’ve worked in **fintech and product-based environments**, contributing to:
+- REST APIs & authentication systems  
+- High-volume transaction & log processing  
+- Data pipelines, monitoring, and debugging  
+- Performance optimization and CI/CD workflows  
+
+---
+
+## 🛠️ Tech Stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=cpp,python,javascript,nodejs,react,express,mongodb,mysql,aws,docker,git,linux&perline=6" />
+</p>
+
+- **Languages**: C++, Python, JavaScript, C  
+- **Core CS**: DSA, OOPs, OS, DBMS, Computer Networks  
+- **Backend & Web**: Node.js, Express.js, React.js, REST APIs  
+- **Cloud & DevOps**: AWS (EC2), Docker, CI/CD, Nginx  
+- **AI / ML**: Scikit-learn, PyTorch, Hugging Face, NLP, LLMs, Vector DBs  
+
+---
+
+## 💼 Experience Highlights
+
+🚀 **Software Engineering Intern – OneStack (FinTech)**  
+Worked on production systems handling **10K+ daily transactions**, OAuth authentication, Apache NiFi pipelines, and Grafana-based monitoring.
+
+⚙️ **Full Stack Intern – Mocapay Infotech**  
+Built and deployed scalable **MERN-based platforms**, integrating AI APIs to automate workflows.
+
+🧠 **SDE Intern – Fleek IT Solutions**  
+Developed REST APIs, ML-based defect risk prediction systems, and CI/CD-enabled backend services.
+
+---
+
+## 🚀 Featured Project
+
+**InsightDocs** — AI-powered document analysis & QA platform  
+- Built using **React, Flask, LLMs, and vector databases**  
+- Improved retrieval efficiency and inference performance  
+- Focused on scalability and real-world usability  
+
+---
+
+## 📈 Currently Grinding
+
+```cpp
+while(true) {
+    PracticeDSA(Striver_A2Z);      // C++
+    BuildBackendSystems();         // APIs, DBs, Scaling
+    ExploreAIApplications();       // LLMs, NLP, Vector Search
 }
 ```
-
-<img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60"> <em><b>I love connecting with different people</b> so if you want to say <b>hi, I'll be happy to meet you more!</b> :)</em>
-
-<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=ShikharGupta0813&show_icons=true&locale=en&layout=compact" alt="ShikharGupta0813" /></p>
----
