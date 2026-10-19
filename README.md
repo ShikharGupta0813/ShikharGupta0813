@@ -180,9 +180,11 @@ LeetCode solutions across core patterns — prepared through Striver's A2Z sheet
 ## `04 / ACHIEVEMENTS`
 
 ```text
-[🏆] HACKATHONS    Multiple hackathon wins
+[🏆] HACKATHONS    Wins at Innokshetra · HackFusion Global Hackathon · Innovate NSUT
 [⚡] JEE MAIN      97 percentile
-[👥] LEADERSHIP    Led a team of 50 volunteers
+[👥] LEADERSHIP    Led 100+ member teams to host the college sports fest,
+                   Krishna Janmashtami celebration, hostel sports events
+                   and the freshers' welcome for juniors
 [🎯] CAREER        Converted internship → full-time SDE-1 offer at OneStack
 ```
 

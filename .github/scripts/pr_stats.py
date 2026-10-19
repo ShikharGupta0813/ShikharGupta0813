@@ -7,11 +7,14 @@ Runs inside GitHub Actions. Needs env vars:
 """
 import json
 import os
+import urllib.error
 import urllib.parse
 import urllib.request
 
 USER = os.environ["GH_USER"]
-TOKEN = os.environ["PR_TOKEN"]
+TOKEN = os.environ.get("PR_TOKEN", "").strip()
+if not TOKEN:
+    raise SystemExit("PR_STATS_TOKEN secret is missing or empty. Add it under Settings > Secrets and variables > Actions.")
 OUT = os.environ.get("OUT", "dist/pr-stats.svg")
 
 
@@ -22,8 +25,15 @@ def count(query: str) -> int:
         "Accept": "application/vnd.github+json",
         "User-Agent": "pr-stats-card",
     })
-    with urllib.request.urlopen(req) as r:
-        return json.load(r)["total_count"]
+    try:
+        with urllib.request.urlopen(req) as r:
+            return json.load(r)["total_count"]
+    except urllib.error.HTTPError as e:
+        if e.code == 401:
+            raise SystemExit("401 Unauthorized: PR_STATS_TOKEN is invalid or expired. Generate a new classic token with 'repo' scope and update the secret.")
+        if e.code == 403:
+            raise SystemExit("403 Forbidden: token not authorized for an org (Configure SSO on the token) or rate-limited.")
+        raise
 
 
 stats = [

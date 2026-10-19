@@ -26,6 +26,7 @@ jobs:
             dist/github-snake-dark.svg?palette=github-dark&color_snake=#FF2D4A&color_dots=#161B22,#3A0F1A,#7A1A2C,#C2263F,#FF5368
 
       - name: Generate PR stats card (includes private repos)
+        continue-on-error: true
         env:
           GH_USER: ${{ github.repository_owner }}
           PR_TOKEN: ${{ secrets.PR_STATS_TOKEN }}
