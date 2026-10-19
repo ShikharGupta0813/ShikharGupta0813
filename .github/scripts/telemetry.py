@@ -71,6 +71,21 @@ for y in years:
     commits += c["totalCommitContributions"]
     contributions += c["contributionCalendar"]["totalContributions"]
 
+# ---------- commits inside every PR you opened (counts squash-merged work) ----------
+pr_commits, cursor = 0, None
+while True:
+    r = graphql(
+        """query($u:String!,$c:String){user(login:$u){
+             pullRequests(first:100,after:$c){pageInfo{hasNextPage endCursor}
+               nodes{commits{totalCount}}}}}""",
+        {"u": USER, "c": cursor},
+    )["user"]["pullRequests"]
+    pr_commits += sum(n["commits"]["totalCount"] for n in r["nodes"])
+    if not r["pageInfo"]["hasNextPage"]:
+        break
+    cursor = r["pageInfo"]["endCursor"]
+commits = max(commits, pr_commits)
+
 # ---------- repos contributed to + language mix across them ----------
 lang_bytes, repo_count, cursor = {}, 0, None
 while True:
@@ -88,6 +103,8 @@ while True:
             continue
         for e in repo["languages"]["edges"]:
             n = e["node"]["name"]
+            if n == "Hack":
+                n = "PHP"
             lang_bytes[n] = lang_bytes.get(n, 0) + e["size"]
     if not r["pageInfo"]["hasNextPage"]:
         break
