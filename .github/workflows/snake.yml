@@ -1,4 +1,4 @@
-name: Generate contribution snake
+name: Generate profile cards (snake + PR stats)
 
 on:
   schedule:
@@ -15,6 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - uses: actions/checkout@v4
+
       - name: Generate snake SVGs
         uses: Platane/snk@v3
         with:
@@ -22,6 +24,13 @@ jobs:
           outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark&color_snake=#FF2D4A&color_dots=#161B22,#3A0F1A,#7A1A2C,#C2263F,#FF5368
+
+      - name: Generate PR stats card (includes private repos)
+        env:
+          GH_USER: ${{ github.repository_owner }}
+          PR_TOKEN: ${{ secrets.PR_STATS_TOKEN }}
+          OUT: dist/pr-stats.svg
+        run: python3 .github/scripts/pr_stats.py
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4

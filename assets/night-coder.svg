@@ -1,131 +1,77 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" width="520" height="400">
   <defs>
-    <linearGradient id="room" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0A0B12"/>
-      <stop offset="1" stop-color="#1A0810"/>
-    </linearGradient>
-    <radialGradient id="screenGlow" cx="0.5" cy="0.4" r="0.6">
-      <stop offset="0" stop-color="#FF2D4A" stop-opacity="0.5"/>
-      <stop offset="1" stop-color="#FF2D4A" stop-opacity="0"/>
+    <radialGradient id="bg" cx="0.5" cy="0.45" r="0.7">
+      <stop offset="0" stop-color="#1E070D"/>
+      <stop offset="1" stop-color="#05060A"/>
     </radialGradient>
-    <linearGradient id="hoodie" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#1C1D26"/>
-      <stop offset="1" stop-color="#0C0D12"/>
-    </linearGradient>
-    <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1A1A22"/>
-      <stop offset="1" stop-color="#3A0F1A"/>
-    </linearGradient>
+    <radialGradient id="iris" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FF5368"/>
+      <stop offset="0.55" stop-color="#B0152C"/>
+      <stop offset="1" stop-color="#3A0A16"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="eyeClip"><path d="M100 190 Q260 70 420 190 Q260 310 100 190 Z"/></clipPath>
+    <path id="r1" d="M260 190 m-66 0 a66 66 0 1 1 132 0 a66 66 0 1 1 -132 0"/>
+    <path id="r2" d="M260 190 m-48 0 a48 48 0 1 0 96 0 a48 48 0 1 0 -96 0"/>
+    <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse">
+      <path d="M26 0H0V26" fill="none" stroke="#FF5368" stroke-opacity=".06"/>
+    </pattern>
     <style>
-      .code{font:600 9px 'JetBrains Mono',Consolas,monospace}
-      .scroll{animation:scroll 6s linear infinite}
-      @keyframes scroll{from{transform:translateY(0)}to{transform:translateY(-96px)}}
-      .blink{animation:blink 4s infinite;transform-origin:center;transform-box:fill-box}
-      @keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
-      .type1{animation:type .35s ease-in-out infinite alternate}
-      .type2{animation:type .35s ease-in-out infinite alternate-reverse}
-      @keyframes type{to{transform:translateY(-3px)}}
-      .steam{animation:steam 3s ease-in-out infinite}
-      @keyframes steam{0%{opacity:0;transform:translateY(0)}40%{opacity:.6}100%{opacity:0;transform:translateY(-22px)}}
-      .flicker{animation:flick 3s infinite}
-      @keyframes flick{0%,100%{opacity:1}47%{opacity:1}48%{opacity:.75}50%{opacity:1}}
-      .star{animation:tw 2.5s ease-in-out infinite}
-      @keyframes tw{50%{opacity:.2}}
+      .ring{font:700 9px 'JetBrains Mono',Consolas,monospace;fill:#FFD0D6;letter-spacing:1px}
+      .spin{animation:spin 14s linear infinite;transform-origin:260px 190px}
+      .spinR{animation:spin 9s linear infinite reverse;transform-origin:260px 190px}
+      @keyframes spin{to{transform:rotate(360deg)}}
+      .lid{animation:lid 6s infinite;transform-origin:260px 190px}
+      @keyframes lid{0%,90%,100%{transform:scaleY(1)}93%{transform:scaleY(.06)}96%{transform:scaleY(1)}}
+      .pupil{animation:pupil 4s ease-in-out infinite;transform-origin:260px 190px}
+      @keyframes pupil{50%{transform:scaleX(.6)}}
+      .gA{opacity:0;animation:gA 3s infinite steps(1)}
+      @keyframes gA{0%,86%,100%{transform:translate(0,0);opacity:0}88%{transform:translate(-8px,2px);opacity:.6}91%{transform:translate(6px,-3px);opacity:.5}94%{opacity:0}}
+      .log{font:500 10px 'JetBrains Mono',Consolas,monospace;fill:#8B929E}
+      .ok{fill:#3DFF8A}
+      .l1{animation:show 8s infinite}.l2{animation:show 8s infinite .6s}.l3{animation:show 8s infinite 1.2s}.l4{animation:show 8s infinite 1.8s}
+      @keyframes show{0%{opacity:0}4%{opacity:1}92%{opacity:1}100%{opacity:0}}
+      .scan{animation:scan 5s linear infinite}
+      @keyframes scan{from{transform:translateY(-30px)}to{transform:translateY(420px)}}
+      .cur{animation:cur 1s steps(1) infinite}@keyframes cur{50%{opacity:0}}
     </style>
-    <clipPath id="screenClip"><rect x="292" y="112" width="176" height="108" rx="4"/></clipPath>
   </defs>
 
-  <rect width="520" height="400" fill="url(#room)"/>
+  <rect width="520" height="400" fill="url(#bg)"/>
+  <rect width="520" height="400" fill="url(#grid)"/>
 
-  <!-- window with city -->
-  <rect x="30" y="34" width="190" height="150" rx="6" fill="#0E0F1A" stroke="#2A2C3A"/>
-  <circle cx="175" cy="70" r="16" fill="#FFE3E8" opacity=".85"/>
-  <circle cx="183" cy="64" r="15" fill="#0E0F1A"/>
-  <circle class="star" cx="60" cy="60" r="1.5" fill="#fff"/>
-  <circle class="star" cx="110" cy="50" r="1.2" fill="#fff" style="animation-delay:-1s"/>
-  <circle class="star" cx="140" cy="90" r="1.3" fill="#fff" style="animation-delay:-.5s"/>
-  <g fill="#161826">
-    <rect x="34" y="130" width="26" height="54"/><rect x="62" y="112" width="22" height="72"/>
-    <rect x="86" y="140" width="30" height="44"/><rect x="118" y="120" width="20" height="64"/>
-    <rect x="140" y="146" width="34" height="38"/><rect x="176" y="126" width="40" height="58"/>
-  </g>
-  <g fill="#FF5368" opacity=".7">
-    <rect x="68" y="122" width="3" height="3"/><rect x="76" y="134" width="3" height="3"/>
-    <rect x="124" y="130" width="3" height="3"/><rect x="186" y="138" width="3" height="3"/>
-    <rect x="200" y="152" width="3" height="3"/><rect x="92" y="150" width="3" height="3"/>
-  </g>
-  <line x1="125" y1="34" x2="125" y2="184" stroke="#2A2C3A" stroke-width="3"/>
-
-  <!-- monitor glow -->
-  <ellipse cx="380" cy="170" rx="190" ry="140" fill="url(#screenGlow)" class="flicker"/>
-
-  <!-- desk -->
-  <rect x="0" y="292" width="520" height="108" fill="#0B0C11"/>
-  <rect x="0" y="288" width="520" height="6" fill="#26141B"/>
-
-  <!-- monitor -->
-  <rect x="284" y="104" width="192" height="124" rx="8" fill="#101119" stroke="#FF5368" stroke-width="2"/>
-  <rect x="292" y="112" width="176" height="108" rx="4" fill="#07080D"/>
-  <g clip-path="url(#screenClip)">
-    <g class="scroll">
-      <g class="code">
-        <text x="300" y="128" fill="#FF5368">def</text><text x="320" y="128" fill="#E0E3E8">retrieve(q):</text>
-        <text x="308" y="140" fill="#8B929E">vec = embed(q)</text>
-        <text x="308" y="152" fill="#FFB454">return qdrant.search(vec)</text>
-        <text x="300" y="164" fill="#FF5368">SELECT</text><text x="338" y="164" fill="#E0E3E8">bank, SUM(amt)</text>
-        <text x="308" y="176" fill="#8B929E">FROM upi_hourly_summary</text>
-        <text x="308" y="188" fill="#E0E3E8">GROUP BY bank;</text>
-        <text x="300" y="200" fill="#3DE0FF">// all tests passing ✓</text>
-        <text x="300" y="212" fill="#FF5368">$</text><text x="310" y="212" fill="#E0E3E8">docker compose up -d</text>
-        <text x="300" y="224" fill="#FF5368">def</text><text x="320" y="224" fill="#E0E3E8">retrieve(q):</text>
-        <text x="308" y="236" fill="#8B929E">vec = embed(q)</text>
-        <text x="308" y="248" fill="#FFB454">return qdrant.search(vec)</text>
-        <text x="300" y="260" fill="#FF5368">SELECT</text><text x="338" y="260" fill="#E0E3E8">bank, SUM(amt)</text>
-        <text x="308" y="272" fill="#8B929E">FROM upi_hourly_summary</text>
-        <text x="308" y="284" fill="#E0E3E8">GROUP BY bank;</text>
-        <text x="300" y="296" fill="#3DE0FF">// all tests passing ✓</text>
-        <text x="300" y="308" fill="#FF5368">$</text><text x="310" y="308" fill="#E0E3E8">docker compose up -d</text>
-      </g>
-    </g>
-  </g>
-  <rect x="370" y="228" width="20" height="40" fill="#14151D"/>
-  <rect x="345" y="266" width="70" height="8" rx="3" fill="#14151D"/>
-
-  <!-- mug -->
-  <rect x="452" y="262" width="26" height="28" rx="4" fill="#2A0A14" stroke="#FF5368" stroke-width="1.5"/>
-  <path d="M478 268 q10 0 10 9 q0 9 -10 9" fill="none" stroke="#FF5368" stroke-width="1.5"/>
-  <path class="steam" d="M460 256 q-4 -8 2 -14" stroke="#8B929E" fill="none"/>
-  <path class="steam" d="M470 256 q4 -8 -2 -14" stroke="#8B929E" fill="none" style="animation-delay:-1.5s"/>
-
-  <!-- character (original design, seen from behind-side) -->
-  <!-- chair -->
-  <rect x="150" y="190" width="110" height="130" rx="18" fill="#14151D" stroke="#26141B" stroke-width="2"/>
-  <!-- body / hoodie -->
-  <path d="M165 300 q-6 -80 40 -100 q50 -12 72 30 q14 30 8 70 z" fill="url(#hoodie)"/>
-  <path d="M190 210 q20 -14 48 -4" stroke="#FF5368" stroke-width="2" fill="none" opacity=".8"/>
-  <!-- arms -->
-  <g class="type1"><path d="M262 232 q30 18 58 48" stroke="#1C1D26" stroke-width="18" stroke-linecap="round" fill="none"/><circle cx="322" cy="282" r="8" fill="#E9C2A6"/></g>
-  <g class="type2"><path d="M250 246 q40 14 84 34" stroke="#22232D" stroke-width="16" stroke-linecap="round" fill="none"/><circle cx="338" cy="282" r="7" fill="#E9C2A6"/></g>
-  <!-- keyboard -->
-  <rect x="300" y="282" width="80" height="8" rx="2" fill="#1D1E28" stroke="#FF5368" stroke-opacity=".5"/>
-  <!-- head -->
+  <!-- boot log -->
   <g>
-    <ellipse cx="238" cy="160" rx="38" ry="42" fill="#E9C2A6"/>
-    <!-- headphones -->
-    <path d="M198 150 q40 -62 80 0" stroke="#FF5368" stroke-width="6" fill="none"/>
-    <rect x="190" y="146" width="14" height="28" rx="6" fill="#FF2D4A"/>
-    <!-- hair (spiky anime style) -->
-    <path d="M198 158 q-8 -42 30 -52 q8 -14 24 -6 q22 -4 30 16 q14 12 6 40 l-8 -14 l-6 18 l-10 -20 l-10 14 l-6 -18 l-12 12 l-4 -16 l-14 12 z" fill="url(#hair)"/>
-    <!-- eye (side view facing screen) -->
-    <g class="blink">
-      <ellipse cx="262" cy="166" rx="5" ry="7" fill="#1A0810"/>
-      <ellipse cx="263" cy="166" rx="3" ry="5" fill="#FF2D4A"/>
-      <circle cx="264" cy="163" r="1.4" fill="#fff"/>
-    </g>
-    <path d="M255 154 l14 -3" stroke="#1A1A22" stroke-width="2.5" stroke-linecap="round"/>
-    <path d="M268 186 q4 2 6 0" stroke="#A8786A" stroke-width="1.5" fill="none"/>
+    <text x="24" y="36" class="log l1">[ <tspan class="ok">OK</tspan> ] mounting /prod/upi-core</text>
+    <text x="24" y="52" class="log l2">[ <tspan class="ok">OK</tspan> ] nifi: summary rollups online</text>
+    <text x="300" y="36" class="log l3">[ <tspan class="ok">OK</tspan> ] qdrant: vectors indexed</text>
+    <text x="300" y="52" class="log l4">[ <tspan class="ok">OK</tspan> ] grafana: watching everything</text>
   </g>
 
-  <text x="30" y="380" style="font:600 11px 'JetBrains Mono',monospace;fill:#8B929E;letter-spacing:2px">02:47 AM · BUILD PASSING ✓</text>
-  <circle cx="20" cy="376" r="4" fill="#3DFF8A"><animate attributeName="opacity" values="1;.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
+  <!-- the eye -->
+  <g class="lid">
+    <path d="M100 190 Q260 70 420 190 Q260 310 100 190 Z" fill="#0A0B10" stroke="#FF5368" stroke-width="2" filter="url(#glow)"/>
+    <g clip-path="url(#eyeClip)">
+      <circle cx="260" cy="190" r="84" fill="url(#iris)" filter="url(#glow)"/>
+      <g class="spin">
+        <text class="ring"><textPath href="#r1">01001011 · SELECT * FROM bugs WHERE alive=1 · DROP · 0xDEADBEEF ·</textPath></text>
+      </g>
+      <g class="spinR">
+        <text class="ring" style="font-size:8px;fill:#FFB4BE"><textPath href="#r2">git push · deploy · observe · repeat ·</textPath></text>
+      </g>
+      <circle cx="260" cy="190" r="84" fill="none" stroke="#05060A" stroke-width="4"/>
+      <ellipse class="pupil" cx="260" cy="190" rx="10" ry="34" fill="#05060A"/>
+      <circle cx="284" cy="164" r="6" fill="#fff" opacity=".85"/>
+      <!-- glitch slices -->
+      <rect class="gA" x="100" y="172" width="320" height="10" fill="#FF2D4A"/>
+      <rect class="gA" x="100" y="206" width="320" height="6" fill="#3DE0FF" style="animation-delay:-.4s"/>
+    </g>
+  </g>
+
+  <text x="260" y="330" text-anchor="middle" style="font:700 13px 'JetBrains Mono',monospace;fill:#FF5368;letter-spacing:5px">I SEE EVERY BUG</text>
+  <rect class="scan" x="0" y="0" width="520" height="24" fill="#FF5368" opacity=".04"/>
+  <text x="24" y="380" class="log">root@shikhar:~$ <tspan class="cur" fill="#FF5368">█</tspan></text>
 </svg>
