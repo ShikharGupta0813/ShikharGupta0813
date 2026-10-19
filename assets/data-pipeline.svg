@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 260" width="1100" height="260">
+  <defs>
+    <style>
+      .box{fill:#0E0F16;stroke:#FF5368;stroke-width:1.5}
+      .h{font:700 14px 'JetBrains Mono',Consolas,monospace;fill:#F2F3F5}
+      .s{font:500 11px 'JetBrains Mono',Consolas,monospace;fill:#8B929E}
+      .t{font:700 12px 'JetBrains Mono',monospace;fill:#FF5368;letter-spacing:3px}
+      .line{stroke:#FF5368;stroke-width:1.5;stroke-dasharray:6 6;animation:flow 1s linear infinite}
+      @keyframes flow{to{stroke-dashoffset:-12}}
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#FF5368"/></marker>
+  </defs>
+  <rect width="1100" height="260" rx="14" fill="#08090D"/>
+  <text x="30" y="36" class="t">// REAL-TIME UPI MIS PIPELINE · WHAT I RUN IN PRODUCTION</text>
+
+  <g transform="translate(30 70)">
+    <rect class="box" width="170" height="90" rx="10"/>
+    <text x="16" y="34" class="h">MySQL binlog</text>
+    <text x="16" y="58" class="s">transactions</text>
+    <text x="16" y="74" class="s">source of truth</text>
+  </g>
+  <g transform="translate(245 70)">
+    <rect class="box" width="170" height="90" rx="10"/>
+    <text x="16" y="34" class="h">Maxwell CDC</text>
+    <text x="16" y="58" class="s">change stream</text>
+    <text x="16" y="74" class="s">row-level events</text>
+  </g>
+  <g transform="translate(460 70)">
+    <rect class="box" width="170" height="90" rx="10" style="fill:#1A0A10"/>
+    <text x="16" y="34" class="h">Apache NiFi</text>
+    <text x="16" y="58" class="s">ETL flows</text>
+    <text x="16" y="74" class="s">scheduled rollups</text>
+  </g>
+  <g transform="translate(675 70)">
+    <rect class="box" width="180" height="90" rx="10"/>
+    <text x="16" y="30" class="h">Summary tables</text>
+    <text x="16" y="52" class="s">hourly → daily</text>
+    <text x="16" y="68" class="s">→ monthly rollups</text>
+    <text x="16" y="84" class="s">bank·customer·error</text>
+  </g>
+  <g transform="translate(900 70)">
+    <rect class="box" width="170" height="90" rx="10"/>
+    <text x="16" y="34" class="h">Grafana</text>
+    <text x="16" y="58" class="s">MIS dashboards</text>
+    <text x="16" y="74" class="s">alerts · on-call</text>
+  </g>
+
+  <line class="line" x1="200" y1="115" x2="243" y2="115" marker-end="url(#a)"/>
+  <line class="line" x1="415" y1="115" x2="458" y2="115" marker-end="url(#a)"/>
+  <line class="line" x1="630" y1="115" x2="673" y2="115" marker-end="url(#a)"/>
+  <line class="line" x1="855" y1="115" x2="898" y2="115" marker-end="url(#a)"/>
+
+  <text x="30" y="214" class="s">Heavy aggregate queries hit pre-computed summaries instead of raw transaction tables — fast MIS, low load on the primary DB.</text>
+</svg>

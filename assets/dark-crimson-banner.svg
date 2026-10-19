@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05060A"/>
+      <stop offset="0.55" stop-color="#12070C"/>
+      <stop offset="1" stop-color="#2A0A14"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.78" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FF2D4A" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#FF2D4A" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#FF5368" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+    <filter id="neon" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .title{font:800 64px 'JetBrains Mono','Fira Code',Consolas,monospace;fill:#F2F3F5;letter-spacing:6px}
+      .sub{font:600 18px 'JetBrains Mono',Consolas,monospace;fill:#FF5368;letter-spacing:5px}
+      .tag{font:500 13px 'JetBrains Mono',Consolas,monospace;fill:#8B929E;letter-spacing:3px}
+      .glitchA{fill:#FF2D4A;opacity:.55;animation:gA 3.2s infinite steps(1)}
+      .glitchB{fill:#3DE0FF;opacity:.35;animation:gB 3.2s infinite steps(1)}
+      @keyframes gA{0%,88%,100%{transform:translate(0,0)}90%{transform:translate(-4px,1px)}93%{transform:translate(3px,-2px)}96%{transform:translate(-2px,0)}}
+      @keyframes gB{0%,88%,100%{transform:translate(0,0)}90%{transform:translate(4px,-1px)}93%{transform:translate(-3px,2px)}96%{transform:translate(2px,0)}}
+      .scan{animation:scan 5s linear infinite}
+      @keyframes scan{from{transform:translateY(-40px)}to{transform:translateY(360px)}}
+      .cursor{animation:blink 1s steps(1) infinite}
+      @keyframes blink{50%{opacity:0}}
+      .rain text{font:600 14px 'JetBrains Mono',monospace;fill:#FF5368}
+      .r1{animation:fall 7s linear infinite}
+      .r2{animation:fall 9s linear infinite -3s}
+      .r3{animation:fall 6s linear infinite -1s}
+      .r4{animation:fall 8s linear infinite -5s}
+      @keyframes fall{from{transform:translateY(-200px);opacity:0}10%{opacity:.5}to{transform:translateY(380px);opacity:0}}
+      .pulse{animation:pulse 2.4s ease-in-out infinite}
+      @keyframes pulse{50%{opacity:.35}}
+    </style>
+  </defs>
+
+  <rect width="1200" height="320" fill="url(#bg)"/>
+  <rect width="1200" height="320" fill="url(#grid)"/>
+  <rect width="1200" height="320" fill="url(#glow)"/>
+
+  <!-- code rain -->
+  <g class="rain">
+    <g class="r1"><text x="1010" y="0">1</text><text x="1010" y="18">0</text><text x="1010" y="36">{</text><text x="1010" y="54">;</text></g>
+    <g class="r2"><text x="1060" y="0">λ</text><text x="1060" y="18">0</text><text x="1060" y="36">1</text><text x="1060" y="54">&gt;</text></g>
+    <g class="r3"><text x="1110" y="0">#</text><text x="1110" y="18">1</text><text x="1110" y="36">}</text><text x="1110" y="54">0</text></g>
+    <g class="r4"><text x="1150" y="0">$</text><text x="1150" y="18">0</text><text x="1150" y="36">1</text><text x="1150" y="54">=</text></g>
+  </g>
+
+  <!-- hexagon core -->
+  <g transform="translate(905 160)" filter="url(#neon)">
+    <polygon points="0,-78 68,-39 68,39 0,78 -68,39 -68,-39" fill="none" stroke="#FF5368" stroke-width="2"/>
+    <polygon class="pulse" points="0,-50 43,-25 43,25 0,50 -43,25 -43,-25" fill="#FF2D4A" fill-opacity="0.12" stroke="#FF5368" stroke-opacity="0.6"/>
+    <text x="0" y="8" text-anchor="middle" style="font:800 24px 'JetBrains Mono',monospace;fill:#FF5368">&lt;/&gt;</text>
+    <g>
+      <circle r="4" fill="#FFB454"><animateMotion dur="6s" repeatCount="indefinite" path="M0,-78 L68,-39 L68,39 L0,78 L-68,39 L-68,-39 Z"/></circle>
+    </g>
+  </g>
+
+  <!-- text -->
+  <text x="70" y="92" class="tag">// INIT SEQUENCE · SDE-1 @ ONESTACK · FINTECH</text>
+  <g>
+    <text x="68" y="168" class="title glitchA">SHIKHAR GUPTA</text>
+    <text x="72" y="168" class="title glitchB">SHIKHAR GUPTA</text>
+    <text x="70" y="168" class="title">SHIKHAR GUPTA</text>
+  </g>
+  <text x="72" y="210" class="sub">BACKEND · DATA PIPELINES · APPLIED AI</text>
+  <text x="72" y="252" class="tag">$ ship --reliable --observable --fast<tspan class="cursor" fill="#FF5368"> █</tspan></text>
+
+  <rect x="70" y="272" width="420" height="2" fill="#FF5368" opacity=".6"/>
+  <rect x="70" y="272" width="90" height="2" fill="#FFB454">
+    <animate attributeName="x" values="70;400;70" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- scanline -->
+  <rect class="scan" x="0" y="0" width="1200" height="40" fill="#FF5368" opacity="0.04"/>
+  <rect x="0" y="318" width="1200" height="2" fill="#FF5368" opacity=".7"/>
+</svg>

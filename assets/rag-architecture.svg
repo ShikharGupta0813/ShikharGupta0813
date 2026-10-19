@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 230" width="1100" height="230">
+  <defs>
+    <style>
+      .box{fill:#0E0F16;stroke:#FF5368;stroke-width:1.5}
+      .h{font:700 14px 'JetBrains Mono',Consolas,monospace;fill:#F2F3F5}
+      .s{font:500 11px 'JetBrains Mono',Consolas,monospace;fill:#8B929E}
+      .t{font:700 12px 'JetBrains Mono',monospace;fill:#FF5368;letter-spacing:3px}
+      .line{stroke:#FFB454;stroke-width:1.5;stroke-dasharray:6 6;animation:flow 1s linear infinite}
+      @keyframes flow{to{stroke-dashoffset:-12}}
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#FFB454"/></marker>
+  </defs>
+  <rect width="1100" height="230" rx="14" fill="#08090D"/>
+  <text x="30" y="36" class="t">// INSIGHTDOCS · RAG ARCHITECTURE</text>
+
+  <g transform="translate(30 66)"><rect class="box" width="160" height="90" rx="10"/><text x="16" y="36" class="h">PDF upload</text><text x="16" y="60" class="s">React client</text></g>
+  <g transform="translate(240 66)"><rect class="box" width="160" height="90" rx="10"/><text x="16" y="36" class="h">Chunking</text><text x="16" y="60" class="s">Flask API</text></g>
+  <g transform="translate(450 66)"><rect class="box" width="160" height="90" rx="10"/><text x="16" y="36" class="h">Embeddings</text><text x="16" y="60" class="s">dense vectors</text></g>
+  <g transform="translate(660 66)"><rect class="box" width="160" height="90" rx="10" style="fill:#1A0A10"/><text x="16" y="36" class="h">Qdrant</text><text x="16" y="60" class="s">top-k retrieval</text></g>
+  <g transform="translate(870 66)"><rect class="box" width="200" height="90" rx="10"/><text x="16" y="36" class="h">Llama LLM</text><text x="16" y="60" class="s">grounded answers</text><text x="16" y="76" class="s">+ summaries</text></g>
+
+  <line class="line" x1="190" y1="111" x2="238" y2="111" marker-end="url(#a)"/>
+  <line class="line" x1="400" y1="111" x2="448" y2="111" marker-end="url(#a)"/>
+  <line class="line" x1="610" y1="111" x2="658" y2="111" marker-end="url(#a)"/>
+  <line class="line" x1="820" y1="111" x2="868" y2="111" marker-end="url(#a)"/>
+  <text x="30" y="196" class="s">Question → embed → retrieve relevant chunks → LLM answers using only retrieved context.</text>
+</svg>
