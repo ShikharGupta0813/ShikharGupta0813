@@ -211,7 +211,7 @@ LeetCode solutions across core patterns — prepared through Striver's A2Z sheet
 
 <div align="center">
 
-<img width="96%" src="https://github-profile-trophy.vercel.app/?username=ShikharGupta0813&theme=radical&no-frame=true&no-bg=true&margin-w=8&column=7" alt="GitHub trophies"/>
+<!-- <img width="96%" src="https://github-profile-trophy.vercel.app/?username=ShikharGupta0813&theme=radical&no-frame=true&no-bg=true&margin-w=8&column=7" alt="GitHub trophies"/> -->
 
 <br/>
 
@@ -229,7 +229,7 @@ LeetCode solutions across core patterns — prepared through Striver's A2Z sheet
 
 <br/>
 
-<img width="96%" src="https://github-readme-activity-graph.vercel.app/graph?username=ShikharGupta0813&bg_color=08090D&color=E0E3E8&line=FF5368&point=FFFFFF&area=true&hide_border=true&custom_title=CONTRIBUTION%20ACTIVITY" alt="GitHub contribution activity graph"/>
+<!-- <img width="96%" src="https://github-readme-activity-graph.vercel.app/graph?username=ShikharGupta0813&bg_color=08090D&color=E0E3E8&line=FF5368&point=FFFFFF&area=true&hide_border=true&custom_title=CONTRIBUTION%20ACTIVITY" alt="GitHub contribution activity graph"/> -->
 
 <br/><br/>
 
