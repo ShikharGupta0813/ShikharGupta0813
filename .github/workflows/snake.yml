@@ -1,4 +1,4 @@
-name: Generate profile cards (snake + PR stats)
+name: Generate profile cards (snake + telemetry)
 
 on:
   schedule:
@@ -17,13 +17,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate PR stats card (includes private repos)
+      - name: Generate telemetry card (includes private repos)
         continue-on-error: true
         env:
           GH_USER: ${{ github.repository_owner }}
           PR_TOKEN: ${{ secrets.PR_STATS_TOKEN }}
-          OUT: dist/pr-stats.svg
-        run: python3 .github/scripts/pr_stats.py
+          OUT: dist/telemetry.svg
+        run: python3 .github/scripts/telemetry.py
 
       - name: Generate snake SVGs
         uses: Platane/snk@v3
