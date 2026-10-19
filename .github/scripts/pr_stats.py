@@ -36,10 +36,13 @@ def count(query: str) -> int:
         raise
 
 
+opened = count(f"is:pr author:{USER}")
+merged = count(f"is:pr is:merged author:{USER}")
+rate = f"{round(merged * 100 / opened)}%" if opened else "-"
 stats = [
-    ("PULL REQUESTS OPENED", count(f"is:pr author:{USER}")),
-    ("PULL REQUESTS MERGED", count(f"is:pr is:merged author:{USER}")),
-    ("PULL REQUESTS REVIEWED", count(f"is:pr reviewed-by:{USER} -author:{USER}")),
+    ("PULL REQUESTS OPENED", opened),
+    ("PULL REQUESTS MERGED", merged),
+    ("MERGE RATE", rate),
 ]
 print(stats)
 
@@ -52,7 +55,7 @@ for i, (label, value) in enumerate(stats):
     delay = i * 0.25
     cells.append(f'''
   <g style="animation:rise .9s ease-out {delay}s both">
-    <text x="{cx}" y="104" text-anchor="middle" class="num">{value:,}</text>
+    <text x="{cx}" y="104" text-anchor="middle" class="num">{value if isinstance(value, str) else f"{value:,}"}</text>
     <text x="{cx}" y="140" text-anchor="middle" class="lbl">{label}</text>
   </g>''')
     if i:

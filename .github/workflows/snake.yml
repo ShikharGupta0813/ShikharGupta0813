@@ -17,14 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate snake SVGs
-        uses: Platane/snk@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark&color_snake=#FF2D4A&color_dots=#161B22,#3A0F1A,#7A1A2C,#C2263F,#FF5368
-
       - name: Generate PR stats card (includes private repos)
         continue-on-error: true
         env:
@@ -32,6 +24,14 @@ jobs:
           PR_TOKEN: ${{ secrets.PR_STATS_TOKEN }}
           OUT: dist/pr-stats.svg
         run: python3 .github/scripts/pr_stats.py
+
+      - name: Generate snake SVGs
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark&color_snake=#FF2D4A&color_dots=#161B22,#3A0F1A,#7A1A2C,#C2263F,#FF5368
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
