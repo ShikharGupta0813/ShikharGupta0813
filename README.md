@@ -8,6 +8,8 @@
 <a href="https://github.com/ShikharGupta0813"><img src="https://img.shields.io/badge/GITHUB-08090D?style=for-the-badge&logo=github&logoColor=FF5368" alt="GitHub"/></a>
 <a href="https://www.linkedin.com/in/shikhargupta0813/"><img src="https://img.shields.io/badge/LINKEDIN-08090D?style=for-the-badge&logo=linkedin&logoColor=FF5368" alt="LinkedIn"/></a>
 <a href="https://leetcode.com/u/Shikhar0813"><img src="https://img.shields.io/badge/LEETCODE-08090D?style=for-the-badge&logo=leetcode&logoColor=FFB454" alt="LeetCode"/></a>
+<a href="https://shikhargupta.hashnode.dev"><img src="https://img.shields.io/badge/HASHNODE-08090D?style=for-the-badge&logo=hashnode&logoColor=FF5368" alt="Hashnode blog"/></a>
+<a href="https://dev.to/shikhar_gupta_4ecf7b4255e"><img src="https://img.shields.io/badge/DEV.TO-08090D?style=for-the-badge&logo=devdotto&logoColor=FF5368" alt="dev.to"/></a>
 <a href="https://github.com/ShikharGupta0813?tab=repositories"><img src="https://img.shields.io/badge/ALL_PROJECTS-08090D?style=for-the-badge&logo=github&logoColor=FF5368" alt="All repositories"/></a>
 <img src="https://komarev.com/ghpvc/?username=ShikharGupta0813&label=PROFILE+VIEWS&color=FF5368&style=for-the-badge" alt="Profile views"/>
 
@@ -241,6 +243,16 @@ $ focus --now
 $ next --level
 > Java / Spring Boot · Go
 ```
+
+## `08 / LATEST WRITING`
+
+```text
+// notes from production — what I learn, written down
+```
+
+<!-- BLOG-POST-LIST:START -->
+- ✍️ First post loading... follow along on [Hashnode](https://shikhargupta.hashnode.dev) and [dev.to](https://dev.to/shikhar_gupta_4ecf7b4255e)
+<!-- BLOG-POST-LIST:END -->
 
 ---
 

@@ -1,0 +1,24 @@
+name: Update latest blog posts
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # every 6 hours
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          feed_list: "https://shikhargupta.hashnode.dev/rss.xml,https://dev.to/feed/shikhar_gupta_4ecf7b4255e"
+          max_post_count: 5
+          remove_duplicates: true
+          template: "- ✍️ [$title]($url) <sub>· $date</sub>$newline"
+          date_format: "dd mmm yyyy"
+          commit_message: "Update latest blog posts"
